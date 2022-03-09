@@ -54,48 +54,26 @@ for (let key in team) {
 }
 
 
-
-let wayneInfos = document.getElementById('Wayne-infos');
-let angelaInfos = document.getElementById('Angela-infos');
-let walterInfos = document.getElementById('Walter-infos');
-let angelaLopezInfos = document.getElementById('Angela-Lopez-infos');
-let scottInfos = document.getElementById('Scott-infos');
-let barbaraInfos = document.getElementById('Barbara-infos');
-
-let arrayOfNames = [];
-
-let arrayOfRoles = [];
-
-for (let i = 0; i < 6; i++) {
-    arrayOfNames.push(team[i].name);
-    arrayOfRoles.push(team[i].role);
-}
-
-console.log(arrayOfNames);
-console.log(arrayOfRoles);
-
-let cardImage = "";
+let cardProfile = "";
 
 for (let i = 0; i < team.length; i++) {
-    cardImage += `<img src="img/${team[i].image}" alt="Immagine di persona del team">`;
+    cardProfile += 
+    `<div class="col-4">
+        <div class="mb-2">
+            <img id="image" class="img-fluid" src="${"img/"+team[i].image}" alt="${team[i].name}">
+        </div>
+        <div id="description" class="text-center">
+            <h3 id="name">
+                ${team[i].name}
+            </h3>
+            <p id="role">
+            ${team[i].role}
+            </p>
+        </div>
+    </div>`;
 };
 
-console.log(cardImage);
+let cardsWrapper = document.getElementById('cards-wrapper');
 
-wayneInfos.innerHTML = team[0].name + " ";
-wayneInfos.innerHTML += team[0].role;
+cardsWrapper.innerHTML += cardProfile;
 
-angelaInfos.innerHTML = team[1].name + " ";
-angelaInfos.innerHTML += team[1].role;
-
-walterInfos.innerHTML = team[2].name + " ";
-walterInfos.innerHTML += team[2].role;
-
-angelaLopezInfos.innerHTML = team[3].name + " ";
-angelaLopezInfos.innerHTML += team[3].role;
-
-scottInfos.innerHTML = team[4].name + " ";
-scottInfos.innerHTML += team[4].role;
-
-barbaraInfos.innerHTML = team[5].name + " ";
-barbaraInfos.innerHTML += team[5].role;
