@@ -52,3 +52,50 @@ const team = [
 for (let key in team) {
     console.log(team[key]);
 }
+
+
+
+let wayneInfos = document.getElementById('Wayne-infos');
+let angelaInfos = document.getElementById('Angela-infos');
+let walterInfos = document.getElementById('Walter-infos');
+let angelaLopezInfos = document.getElementById('Angela-Lopez-infos');
+let scottInfos = document.getElementById('Scott-infos');
+let barbaraInfos = document.getElementById('Barbara-infos');
+
+let arrayOfNames = [];
+
+let arrayOfRoles = [];
+
+for (let i = 0; i < 6; i++) {
+    arrayOfNames.push(team[i].name);
+    arrayOfRoles.push(team[i].role);
+}
+
+console.log(arrayOfNames);
+console.log(arrayOfRoles);
+
+let cardImage = "";
+
+for (let i = 0; i < team.length; i++) {
+    cardImage += `<img src="img/${team[i].image}" alt="Immagine di persona del team">`;
+};
+
+console.log(cardImage);
+
+wayneInfos.innerHTML = team[0].name + " ";
+wayneInfos.innerHTML += team[0].role;
+
+angelaInfos.innerHTML = team[1].name + " ";
+angelaInfos.innerHTML += team[1].role;
+
+walterInfos.innerHTML = team[2].name + " ";
+walterInfos.innerHTML += team[2].role;
+
+angelaLopezInfos.innerHTML = team[3].name + " ";
+angelaLopezInfos.innerHTML += team[3].role;
+
+scottInfos.innerHTML = team[4].name + " ";
+scottInfos.innerHTML += team[4].role;
+
+barbaraInfos.innerHTML = team[5].name + " ";
+barbaraInfos.innerHTML += team[5].role;
