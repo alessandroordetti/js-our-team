@@ -53,9 +53,10 @@ for (let key in team) {
     console.log(team[key]);
 }
 
-
+/* dichiaro e inizializzo una variabile vuota */
 let cardProfile = "";
 
+/* Ciclo ogni persona dell'array per creare card tutte uguali da inserire nella sezione centrale */
 for (let i = 0; i < team.length; i++) {
     cardProfile += 
     `<div class="col-4">
