@@ -49,8 +49,14 @@ const team = [
 ];
 
 /* Stampiamo a schermo le informazioni dell'oggetto classi */
-for (let key in team) {
+
+/* SBAGLIATO!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* for (let key in team) {
     console.log(team[key]);
+} */
+
+for (let i = 0; i < team.length; i++){
+    console.log(team[i]);
 }
 
 /* dichiaro e inizializzo una variabile vuota */
@@ -61,7 +67,7 @@ for (let i = 0; i < team.length; i++) {
     cardProfile += 
     `<div class="col-4">
         <div class="mb-2">
-            <img id="image" class="img-fluid" src="${"img/"+team[i].image}" alt="${team[i].name}">
+            <img id="image" class="img-fluid rounded" src="${"img/"+team[i].image}" alt="${team[i].name}">
         </div>
         <div id="description" class="text-center">
             <h3 id="name">
@@ -74,6 +80,7 @@ for (let i = 0; i < team.length; i++) {
     </div>`;
 };
 
+/* Selezione il div nel quale andrò a mettere le cards profile ciclate nel for */
 let cardsWrapper = document.getElementById('cards-wrapper');
 
 cardsWrapper.innerHTML += cardProfile;

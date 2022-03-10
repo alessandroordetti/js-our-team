@@ -4,4 +4,5 @@ footer {
 
 input {
     width: 300px;
+    border-radius: 3px solid;
 }
